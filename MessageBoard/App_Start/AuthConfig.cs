@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Web.WebPages.OAuth;
-using MessageBoard.Models;
+﻿using Microsoft.Web.WebPages.OAuth;
 
 namespace MessageBoard
 {
     public static class AuthConfig
     {
+
         public static void RegisterAuth()
         {
             // To let users of this site log in using their accounts from other sites such as Microsoft, Facebook, and Twitter,
@@ -22,11 +18,10 @@ namespace MessageBoard
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient("742132622525220", "a1545b740324055fb254cfbd1f8f9db1");
 
-            //OAuthWebSecurity.RegisterGoogleClient();
+            OAuthWebSecurity.RegisterGoogleClient();
         }
+
     }
 }

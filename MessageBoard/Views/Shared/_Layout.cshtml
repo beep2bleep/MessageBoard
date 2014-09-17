@@ -25,7 +25,8 @@
     <!-- Font awesome CSS -->
     <link href="~/Content/Template/css/font-awesome.min.css" rel="stylesheet">
     <!-- Change the template color below. Supported colors blue,red and green. -->
-    <link href="~/Content/Template/css/blue.css" rel="stylesheet">
+    @*<link href="~/Content/Template/css/red.css" rel="stylesheet">*@
+    <link href="~/Content/Template/css/green.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="~/Content/Template/css/style.css" rel="stylesheet">
 
@@ -50,7 +51,7 @@
                     <div class="padd">
                         <div class="social">
                             <!-- Social media icons. Repalce # with your profile links -->
-                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="facebook" href="https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer"><i class="fa fa-facebook"></i></a>
                             <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
                             <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
                             <a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
@@ -73,17 +74,17 @@
                     <div class="logo">
                         <div class="pull-left">
                             <!-- Logo with font awesome icon. Replace it with your logo. Replace # with your site link -->
-                            <h1><a href="index.html"><i class="fa fa-camera-retro"></i> OneColor</a></h1>
+                            <h1><a href="/"><i class="fa fa-camera-retro"></i> Message Board</a></h1>
                         </div>
                         <div class="navi">
                             <!-- Navigation Starts Here -->
                             <div class="pull-left">
                                 <div id="ddtopmenubar" class="mattblackmenu">
                                     <!-- Main navigation -->
-                                    <ul>
+                                    @*<ul>
                                         <!-- Add rel="ddsubmenu{count}" to main menu -->
                                         <li>
-                                            <a href="index.html" rel="ddsubmenu1">Home</a>
+                                            <a href="/" rel="ddsubmenu1">Home</a>
                                             <!-- Sub navigation, A -->
                                             <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
                                             <ul id="ddsubmenu1" class="ddsubmenustyle">
@@ -127,8 +128,16 @@
                                             </ul>
                                         </li>
                                         <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                        <li><a href="/home/contact">Contact Us</a></li>
+                                    </ul>*@
+                                    
+                                    <ul>
+                                        <li>@Html.ActionLink("Home","Index", "Home")</li>
+                                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                                        <li>@Html.ActionLink("My Messages", "MyMessages", "Home")</li>
                                     </ul>
+
                                 </div>
                             </div><!--/ Navigation Ends Here -->
                         </div>
@@ -217,7 +226,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- Copyright information -->
-                    <div class="fpadd">Copyright &copy; 2012 - <a href="#">Your Site</a> / <a href="#">Disclaimer</a> / <a href="#">Privacy Policy</a></div>
+                    <div class="fpadd">Copyright &copy; 2014 - <a href="http://www.Beep2Bleep.com"> Beep2Bleep</a> / <a href="#">Disclaimer</a> / <a href="#">Privacy Policy</a></div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -232,11 +241,12 @@
     <!-- JavaScript files -->
     <!-- jQuery -->
 
-    <script src="/Scripts/jquery-1.8.2.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="/Scripts/bootstrap.min.js"></script>
+    
+
+    @*<script src="~/Scripts/jquery.js"></script>*@
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
     <!-- Easing JS -->
-    <script src="~/Scripts/easing.js"></script>
+    <script src="/Scripts/easing.js"></script>
     <!-- Drop Down Menu Plug-in JS -->
     <script src="/Scripts/ddlevelsmenu.js"></script>
     <!-- Flex Slider JS -->
@@ -255,6 +265,8 @@
     </script>
 
     @RenderSection("scripts", required: false)
+    <!-- Bootstrap JS -->
+    <script src="/Scripts/bootstrap.min.js"></script>
 
 </body>
 </html>

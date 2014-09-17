@@ -1,61 +1,61 @@
 /* Green Color */
 
 a, a:visited{
-color:#08b900;
+color:#087500;
 text-decoration:none;
 }
 
 a:hover{
-color:#08b900;
+color:#087500;
 text-decoration:underline;
 }
 
 .fixedbar{
-background:#08b900;
+background:#087500;
 }
 
 .ddsubmenustyle, .ddsubmenustyle div{
-border:1px solid #08a600 !important;
+border:1px solid #087500 !important;
 }
 
 .ddsubmenustyle li a{
-background:#08b900 !important;
-border-bottom:1px solid #08a600 !important;
+background:#087500 !important;
+border-bottom:1px solid #087500 !important;
 }
 
 .ddsubmenustyle li a:hover{
-background:#08a600 !important;
+background:#087500 !important;
 }
 
 .mattblackmenu ul{
-background:#08b900 !important;
+background:#087500 !important;
 }
 
 .mattblackmenu li a{
-background:#08b900 !important;
+background:#087500 !important;
 }
 
 .mattblackmenu li a:hover{
-background:#08a600 !important;
+background:#087500 !important;
 }
 
 .main blockquote{
 background:url('../img/quote-green.png') top left no-repeat;
 }
 
-.entry li i { color: #08b900; }
+.entry li i { color: #087500; }
 
 .posts .entry h2{
-background:#08b900;
+background:#087500;
 }
 
-.default-header hr{ border-top: 5px solid #08b900; }
+.default-header hr{ border-top: 5px solid #087500; }
 
 .service-item h3,
-.features-item h4{ color:#08b900; }
+.features-item h4{ color:#087500; }
 
 .foot{
-background:#08b900;
+background:#087500;
 }
 
 .foot a, .foot a:visited{

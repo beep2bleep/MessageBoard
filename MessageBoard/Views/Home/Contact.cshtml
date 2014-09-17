@@ -1,50 +1,112 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Us";
+}
+@section scripts
+{
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+<div class="col-md-12">
+    <div class="whity content">
+        <!-- Main Content Starts Here -->
+        <!-- Content should be encloased inside div with the class "posts" -->
+        <div class="posts">
+            <!-- Each entry should be enclosed inside div with the class "entry" -->
+            <div class="entry">
+                <div class="padd">
+                    <!-- Contact Page title -->
+                    <h2>Contact Us</h2>
+                    <!-- Contact Page Para -->
+                    <p>Fusce imperdiet, risus eget viverra faucibus, diam mi vestibulum libero, ut vestibulum tellus magna nec enim. Nunc dapibus varius interdum. Phasellus at lorem ut lectus fermentum convallis.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8">
+                    @*<div class="span8">*@
+                        <div class="padd">
+                            <div class="co-form">
+                                <form class="form-horizontal" method="POST">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="name">Name</label>
+                                            
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="name" name="name" data-val="true" data-val-required="*" placeholder="Name">
+                                                <span class="field-validation-valid" data-valmsg-for="name" data-valmsg-replace="true"></span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="email" >Email</label>
+                                            
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email" data-val="true" data-val-required="*" data-val-email="Not Valid">
+                                                <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="website">Website</label>
+                                            
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" id="website" name="website" placeholder="Website" data-val="true" data-val-required="*">
+                                                <span class="field-validation-valid" data-valmsg-for="website" data-valmsg-replace="true"></span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3" for="comment" >Message</label>
+                                            
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" id="comment" rows="4" name="comment" placeholder="Message..." data-val="true" data-val-required="*"></textarea>
+                                                <span class="field-validation-valid" data-valmsg-for="comment" data-valmsg-replace="true"></span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button type="submit" class="btn btn-info">Send</button> &nbsp;
+                                                @if (ViewBag.MailSent != null && ViewBag.MailSent)
+                                                {
+                                                    <div>Mail Sent!</div>
+                                                }
+                                                <button type="reset" class="btn btn-default">Reset</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="padd">
+                            <div class="address">
+                                <address>
+                                    <strong>Twitter, Inc.</strong><br>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890.<br><br>
+                                    <strong>Full Name</strong><br>
+                                    <a href="mailto:web@beep2bleep.com">web@beep2bleep.com</a>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Google Map -->
+                <div class="gmap">
+                    <div class="padd">
+                        <!-- Goto Google maps and copy the embed code of your location. Replace the below embed code with your code. -->
+                        <iframe height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Google+India+Bangalore,+Bennigana+Halli,+Bangalore,+Karnataka&amp;aq=0&amp;oq=google+&amp;sll=9.930582,78.12303&amp;sspn=0.192085,0.308647&amp;ie=UTF8&amp;hq=Google&amp;hnear=Bennigana+Halli,+Bangalore,+Bengaluru+Urban,+Karnataka&amp;t=m&amp;ll=12.993518,77.660294&amp;spn=0.012545,0.036006&amp;z=15&amp;output=embed"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Ends Here -->
+    </div>
 
-<section class="contact">
-    <header>
-        <h3>Phone</h3>
-    </header>
-    <p>
-        <span class="label">Main:</span>
-        <span>425.555.0100</span>
-    </p>
-    <p>
-        <span class="label">After Hours:</span>
-        <span>425.555.0199</span>
-    </p>
-</section>
-
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Support:</span>
-        <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">Marketing:</span>
-        <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">General:</span>
-        <span><a href="mailto:General@example.com">General@example.com</a></span>
-    </p>
-</section>
-
-<section class="contact">
-    <header>
-        <h3>Address</h3>
-    </header>
-    <p>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399
-    </p>
-</section>
+</div>
